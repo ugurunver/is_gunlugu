@@ -1,0 +1,15 @@
+# Statik kod dosyalari
+*.log
+*.pot
+*.pyc
+*.zip
+
+# IDE tarafindan olusturulmus dosyalar
+.idea
+
+# Swap dosyalari
+*~
+
+
+
+
