@@ -1,0 +1,24 @@
+{% extends 'genel_form.html' %}
+{%block action_url %}
+	{% url 'isler:problem_kaydi' %}
+{%endblock%}
+{%block alanlar %}
+	<tr>
+		<td>{{form.baslik.label}}</td>
+		<td>{{form.baslik}}</td>
+	</tr>
+	<tr>
+		<td>{{form.aciklama.label}}</td>
+		<td>{{form.aciklama}}</td>
+	</tr>
+	<tr>
+		<td>{{form.cozuldu.label}}</td>
+		<td>{{form.cozuldu}}</td>
+	</tr>
+	<tr>
+		<td>{{form.cozumu.label}}</td>
+		<td>{{form.cozumu}}</td>
+	</tr>
+
+	
+{%endblock%}

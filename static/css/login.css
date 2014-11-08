@@ -1,0 +1,16 @@
+body { background: url('../img/bg.jpg') center fixed; background-size: cover; font-family: 'Source Sans Pro', sans-serif;}
+.smart_login form { background: #fff; padding: 20px; border-bottom: 3px solid #666; border-radius:0 0 5px 5px }
+@media (min-width: 768px) {
+    .smart_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
+input { border-radius: 0 !important }
+input:focus { box-shadow: none !important; }
+input:hover { border-color: #f9c5cf }
+.smart_login .smart_loginForm .input-group.i { width: 2em }
+.smart_login .smart_loginForm  .help-block { color: red }
+.login_heading { background: #fff; text-align: center; margin-top: 20%; padding:20px 0; border-top: 3px solid #028c3e; border-radius: 5px 5px 0 0}
+form.smart_loginForm input {  }
+form.smart_loginForm input:hover;form.smart_loginForm input:focus { box-shadow: none !important; }
+.mt10 {margin-top: 10px !important;}

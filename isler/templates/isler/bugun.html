@@ -1,0 +1,93 @@
+{% extends 'ana.html' %}
+
+{% block icerik %}
+
+	<div class="row">
+		<div class="col-xs-9">
+			{% if bugunun_notlari %}
+				<div class="box" >
+					<h3>Notlar:</h3>
+					<div class="col-xs-12">					
+						{% for kayit in bugunun_notlari %}
+							<div style="margin:10px">
+								<span class="label label-success pull-right">{{kayit.olusturulma}}</span>
+								<div class="clearfix"></div>
+								<div class="box"  style="background:#ffa; padding:10px">
+								 {{kayit.aciklama}} 
+								</div>
+							</div>
+						{% endfor %}					
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			{%endif%}
+
+			{% if bugunun_problemleri %}
+				<div class="box" >
+					<h3>Problemler:</h3>
+					<div class="col-xs-12">
+						{% for kayit in bugunun_problemleri %}
+							<div style="margin:10px">
+								<span class="label label-success pull-right">{{kayit.olusturulma}}</span>
+								<div class="clearfix"></div>
+								<div class="panel panel-danger">
+
+									<div class="panel-heading">{{kayit.baslik}}</div>
+							  		<div class="panel-body">
+							    		{{kayit.aciklama}}
+							  		</div>							  
+								</div>
+							</div>
+						{% endfor %}						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			{% endif %}
+
+			{% if bugunun_gorevleri %}
+				<div class="box" >
+					<h3>Yapılacaklar:</h3>
+					<div class="col-xs-12">
+						{% for kayit in bugunun_gorevleri %}
+							<div style="margin:10px">
+								<span class="label label-success pull-right">{{kayit.olusturulma}}</span>
+								<div class="clearfix"></div>
+								<div class="panel panel-info">
+
+									<div class="panel-heading">{{kayit.baslik}}</div>
+							  		<div class="panel-body">
+							    		{{kayit.aciklama}}
+							  		</div>							  
+								</div>
+							</div>
+						{% endfor %}						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			{% endif %}
+
+
+			{% if bugunun_hatirlatmalari %}
+				<div class="box" >
+					<h3>Hatırlatmalar:</h3>
+					<div class="col-xs-12">
+						{% for kayit in bugunun_hatirlatmalari %}
+							<div style="margin:10px">
+								<span class="label label-success pull-right">{{kayit.olusturulma}}</span>
+								<div class="clearfix"></div>
+								<div class="box"  style="background:#B3EAEB; padding:10px">
+
+							    	{{kayit.aciklama}}
+							  								  
+								</div>
+							</div>
+						{% endfor %}						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			{% endif %}
+
+		</div>
+	</div>
+
+{%endblock%}

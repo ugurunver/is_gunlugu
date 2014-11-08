@@ -1,0 +1,12 @@
+{% extends 'genel_form.html' %}
+{%block action_url %}
+	{% url 'isler:not_kaydi' %}
+{%endblock%}
+{%block alanlar %}
+	{% for alan in form %}
+		<tr>
+			<td>{{alan.label}}</td>
+			<td>{{alan}}</td>
+		</tr>
+	{%endfor%}
+{%endblock%}

@@ -1,0 +1,135 @@
+/* style.css */
+body { background: url('../img/bg.jpg') center fixed; background-size: cover; font-family: 'Source Sans Pro', sans-serif;}
+*,h1,h2,h3,h4,h5,h6 { font-family: 'Source Sans Pro', sans-serif; }
+input,select,textarea { border-radius: 0 !important }
+input:focus,select:focus,textarea:focus { box-shadow: none !important; }
+input:hover,select:hover,textarea:hover { border-color: #f9c5cf }
+fieldset:disabled input[type="text"] { background: #fff }
+a:hover { text-decoration:none }
+hr.clearform { margin: 0 0 20px; width: 95%; margin-left: auto; margin-right: auto }
+@media (max-width: 991px) {
+	#musteri-listele .musteri-unvan,  /* #musteri-listele.musteri-efatura*/ { display:none  }
+	#sube-duzenle .btn { margin-bottom:5px }
+  #sidebarBtn { display:none }
+	}
+.container { width:95%; }
+.iade-fatura { padding-left: 30px }
+.iade-fatura input { padding: 4px 7px !important; height: auto }
+.adminHead { background: #fff; padding:5px 0 0 }
+.user-panel { padding: 10px 0; color:#34495E !important; margin-right: -10px }
+.user-panel a { font-weight: bold; margin:0 10px }
+.user-panel a:hover { text-decoration: none; color: #16A085 }
+.user-panel span:last-child { margin-right: 10px }
+.adminNav { background: #eee; padding: 10px 0 5px; border-top: 1px solid #e2e2e2; border-bottom: 1px solid #adadad }
+.adminNav .btn { border-radius: 0px; margin-right: 5px; margin-bottom: 5px; float:left }
+.adminNav .btn i.glyphicon { margin-right: 7px }
+.adminNav #home i.glyphicon { margin-right: 3px }
+.adminNav .dropdown-menu { border-radius: 0px }
+.sidebar { margin-top: 20px; margin-right: -5px; position:absolute; width:95%; }
+.sideNav { border-radius: 5px; overflow: hidden }
+.sideNav,.sideNav ul { list-style: none; padding: 0 }
+.sideNav li { background:#34495E; border-bottom: 1px solid rgba(0,0,0, 0.2) }
+.sideNav li a { color:#fff; font-size:1.1em; width: 100%; display:block; padding: 10px 20px } .sideNav li a:hover { text-decoration:none }
+.sideNav li ul li { padding-left: 15px; background-color:rgba(0,0,0, 0.15)  }
+.sideNav li ul li a { color: rgba(255,255,255, 0.7); font-size: 1em }
+.sideNav li ul li a:hover { color: rgba(255,255,255, 1) }
+.sideNav .glyphicon { margin-right: 10px }
+.notifhead { color: #34495E !important; font-weight: 400 !important; border-bottom: 1px solid #ddd; padding: 10px 20px; font-size:1.1em; border-radius: 5px 5px 0 0; margin-bottom:0px }
+.notiflist { list-style:none; padding: 0 }
+.notiflist li { padding:5px 10px; border-bottom:1px solid #eee }
+.notiflist li:hover { background:#eee; border-color:#ddd }
+.notiflist li a { color:#34495E }
+.notiflist li a:hover { text-decoration:none }
+.notiflist li span { font-size: 0.9em }
+.content { margin-bottom: 50px }
+.box { background: #fff; padding: 0 0 20px; border-radius: 5px 5px 0 0; box-shadow: 0 1px #999; }
+.box p { padding: 20px 20px 0 }
+.box h3 { background: #409652; color: #fff; text-shadow:-1px -1px 0 #2C3E50; padding: 10px 20px; font-size:1.3em; border-radius: 5px 5px 0 0 }
+.box h3 i.glyphicon { font-size: 0.8em }
+.box form { padding: 10px 20px }
+.box h4 { color:#34495E  }
+.input-group { width: 100% !important }
+.yeni-musteri-info,.yeni-stok-info { padding: 10px 20px }
+.yeni-musteri-info label,.yeni-stok-info label { margin: 0 10px 0 0; }
+.yeni-musteri-info span,.yeni-stok-info span { margin-right: 40px ;padding: 5px 10px }
+.btn .glyphicon { margin-right: 3px }
+.btn-xs .glyphicon { margin-right: 0px }
+.yeni-stok-info .fiyat { font-size: 0.9em } 
+.durum { padding:3px 5px }
+#sube-sec { border-bottom: 1px solid #ddd }
+#sube-sec thead tr th:first-child, #sube-sec tbody tr td:first-child { padding-left: 30px  }
+#sube-sec thead tr th:last-child, #sube-sec tbody tr td:last-child { text-align: left; padding-right: 50px  }
+.sube-btn, .sube-kaldir { position: relative; left: -15px }
+.sube-btn {top: 25px; }
+#sube-kaldir { top: 70px; display: none }
+table tr th:first-child,table tr td:first-child { padding-left:20px }
+#mal-hizmet tr td { padding: 0 }
+table#mal-hizmet tr th:first-child,table#mal-hizmet tr td:first-child { padding-left:20px; padding-top: 7px }
+#mal-hizmet input[type="text"] { width: 100%; border: none; outline: none; padding: 5px }
+#mal-hizmet select { width: 100%; border: none; outline: none; padding: 5px }
+#mal-hizmet td { background: #f3f3f3 }
+#toplamlar .input-group button.btn-primary { width:190px; text-align: right; cursor: auto }
+#toplamlar .input-group button.btn-primary:focus { outline:none }
+#toplamlar .input-group button.btn-primary:hover { background: none }
+#ui-datepicker-div { z-index: 2 !important}
+.help-block { color: red; margin-bottom:0 }
+@-webkit-keyframes blinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+.help-block {
+  -webkit-animation-name: blinker;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: cubic-bezier(.1, 0, 1, 1);
+  -webkit-animation-duration: 0.5s; 
+}   
+table.inputtable {
+	width: 100%;margin: 15px 0;border: 1px solid #eee;border-collapse: collapse;border-spacing: 0;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.mt5 { margin-top: 5px }
+.mt10 { margin-top: 10px }
+.mt20 { margin-top: 20px }
+.ml-20 { margin-left:-20px }
+.p0 { padding: 0 !important }
+.p10 { padding: 10px !important }
+.lh { margin-top:1.75em !important}
+.fiyat { text-align: right; font-weight: bold; font-size: 1.1em }
+iframe#efatura {width:860px; height:500px; border:none; display: block; margin: 0 20px}
+#efatura-log ul { padding:0 20px }
+#efatura-log ul span { margin-bottom: 10px; border-bottom:1px solid #ddd; }
+#efatura-log ul li { display: table; font-size: 1em; margin-bottom: 5px; width: 100%; text-align: left; padding: 10px }
+#efatura-log ul li.label { white-space:normal }
+h4.panel-title a:hover { text-decoration: none }
+h4.panel-title span { margin-right: 10px }
+h2.panel-title { background-color: none; padding: 10px; text-shadow:none;  } 
+.panel-heading { padding:1px 10px }
+.close-sidebar, .open-sidebar { position: absolute; top: 20px; left: -22px; padding:5px 5px 3px }
+#fatura-eksin { margin-top: 5px }
+#fatura-eksin .btn { margin-bottom:5px }
+#showInvoice table { border:none !important; }
+#showInvoice th { border-bottom:1px solid rgba(0,0,0, 0.1); color: rgba(0,0,0, 0.7); }
+#showInvoice th:first-child,#showInvoice td:first-child { text-align:left }
+#showInvoice td,#showInvoice th { text-align: center; border: 3px solid rgba(255,255,255, 0.99) }
+#showInvoice table td span:first-child { font-size:0.85em; width:100%; display:block; opacity:0.6; font-style:italic }
+.well strong { color:#34495E; font-size: 1.1em; margin-bottom:5px }
+.well p { padding:2px 10px; margin:0 }
+.well-blue { border-radius:0; border-left:7px solid #77bae7; border-color: #77bae7; background:none; box-shadow: none }
+.well-green { border-radius:0; border-left:7px solid #65d2bd; border-color: #65d2bd; background:none; box-shadow: none }
+.well-gray { border-radius:0; border-left:17px solid #ddd; border-color: #ddd; background:none; box-shadow: none }
+.well-gray p { padding:3px 0; margin-bottom:7px; border-bottom: #ddd 1px solid }
+.well-gray p span { clear: both } 
+table.table-toplam td { background:#f6f6f6 !important; font-weight:bold; color:#C0392B; border-top:1px solid #ddd !important;  }
+.fdurum .p10 span { width:100%; display:block; padding:7px 11px; margin-bottom:5px; border:1px solid rgba(100,100,100,0.1)}
+.fdurum table.table-striped td:first-child { border-right:1px solid #ddd }
+.fdurum table.table-striped td { border-bottom:1px solid #ddd }
+.fdurum hr { margin:3px; border-color:rgba(0,0,0,0.05); }
+.fdurum .btn { margin-bottom:3px }
+.p20 { padding: 20px !important }
+.p5 { padding: 5px !important }
+.tac { text-align:center; width:100% }
+.ml10 { margin-left:10px !important }
+.text-danger { background:#d9534f; color:#fff }
+.yanit_label { font-size: 1em }
+#faturaForm .help-block { margin-bottom: -15px !important; position:relative; top:7px; left:5px } 
+.has-feedback .form-control-feedback { z-index:2 }

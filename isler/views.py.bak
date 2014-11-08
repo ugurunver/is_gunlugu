@@ -1,0 +1,74 @@
+from django.shortcuts import render
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
+
+from datetime import datetime
+
+from isler.models import Not, Problem, Gorev, Hatirlatma, Is
+
+from isler.forms import NotForm, ProblemForm, GorevForm, HatirlatmaForm
+
+def bugun(request):
+	bugunun_notlari = Not.objects.filter(gun=datetime.now())
+	bugunun_problemleri = Problem.objects.filter(gun=datetime.now())
+	bugunun_gorevleri = Gorev.objects.filter(gun=datetime.now())
+	bugunun_hatirlatmalari = Hatirlatma.objects.filter(gun=datetime.now())
+	return render(request, "isler/bugun.html", locals())
+
+
+
+def not_kaydi(request):	
+	if request.method == "POST":
+		form  = NotForm(request.POST)
+		if form.is_valid():
+			form.save()	
+			return HttpResponseRedirect(reverse("isler:bugun"))
+		else:
+			return render(request, "isler/not_formu.html", locals())
+	else:
+		form  = NotForm()
+		return render(request, "isler/not_formu.html", locals())
+
+
+def problem_kaydi(request):	
+	if request.method == "POST":
+		form  = ProblemForm(request.POST)
+		if form.is_valid():
+			form.save()	
+			return HttpResponseRedirect(reverse("isler:bugun"))
+		else:
+			return render(request, "isler/problem_formu.html", locals())
+	else:
+		form  = ProblemForm()
+		return render(request, "isler/problem_formu.html", locals())
+
+
+
+def gorev_kaydi(request):	
+	if request.method == "POST":
+		form  = GorevForm(request.POST)
+		if form.is_valid():
+			form.save()	
+			return HttpResponseRedirect(reverse("isler:bugun"))
+		else:
+			return render(request, "isler/gorev_formu.html", locals())
+	else:
+		form  = GorevForm()
+		return render(request, "isler/gorev_formu.html", locals())
+
+
+
+def hatirlatma_kaydi(request):	
+	if request.method == "POST":
+		form  = HatirlatmaForm(request.POST)
+		if form.is_valid():
+			form.save()	
+			return HttpResponseRedirect(reverse("isler:bugun"))
+		else:
+			return render(request, "isler/hatirlatma_formu.html", locals())
+	else:
+		form  = HatirlatmaForm()
+		return render(request, "isler/hatirlatma_formu.html", locals())
+
+
+

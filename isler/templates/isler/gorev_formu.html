@@ -1,0 +1,24 @@
+{% extends 'genel_form.html' %}
+{%block action_url %}
+	{% url 'isler:gorev_kaydi' %}
+{%endblock%}
+{%block alanlar %}
+	<tr>
+		<td>{{form.baslik.label}}</td>
+		<td>{{form.baslik}}</td>
+	</tr>
+	<tr>
+		<td>{{form.aciklama.label}}</td>
+		<td>{{form.aciklama}}</td>
+	</tr>
+	<tr>
+		<td>{{form.yapildi.label}}</td>
+		<td>{{form.yapildi}}</td>
+	</tr>
+	<tr>
+		<td>{{form.notlar.label}}</td>
+		<td>{{form.notlar}}</td>
+	</tr>
+
+	
+{%endblock%}

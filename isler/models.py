@@ -17,5 +17,18 @@ class Not(Is):
 class Problem(Is):
 	baslik = models.CharField(max_length=500)
 	cozuldu = models.BooleanField(default=False)
+	cozumu = models.TextField(blank=True, null=True)
 	tip = "problem"
 
+
+class Gorev(Is):
+	baslik = models.CharField(max_length=500)
+	yapildi = models.BooleanField(default=False)
+	notlar = models.TextField(blank=True, null=True)
+	tip = "gorev"
+
+
+class Hatirlatma(Is):
+	tarih = models.DateTimeField(blank=True, null=True)
+	aktif = models.BooleanField(default=True)
+	tip = "hatirlatma"

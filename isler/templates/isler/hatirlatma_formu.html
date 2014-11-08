@@ -1,0 +1,20 @@
+{% extends 'genel_form.html' %}
+{%block action_url %}
+	{% url 'isler:hatirlatma_kaydi' %}
+{%endblock%}
+{%block alanlar %}
+	<tr>
+		<td>{{form.aciklama.label}}</td>
+		<td>{{form.aciklama}}</td>
+	</tr>
+	<tr>
+		<td>{{form.tarih.label}}</td>
+		<td>{{form.tarih}}</td>
+	</tr>
+	<tr>
+		<td>{{form.aktif.label}}</td>
+		<td>{{form.aktif}}</td>
+	</tr>
+
+	
+{%endblock%}
